@@ -12,7 +12,7 @@ int main(){
     for (int j = 0 ; j <= i ; j++ ){
       cin >> val[i][j] ;
       if ( j == 0 ) val[i][j] += val[i-1][j];
-      else if ( j == i ) val[i][j] += val[i-1][j];
+      else if ( j == i ) val[i][j] += val[i-1][j-1];
       else val[i][j] += Max( val[i-1][j-1], val[i-1][j] ) ;
       if (max < val[i][j]) max=val[i][j];
     }
